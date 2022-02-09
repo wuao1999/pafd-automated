@@ -266,10 +266,9 @@ def get_account():
         print("账号已保存在目录下account.txt，请注意文件安全，不要放在明显位置\n\n建议拉个快捷方式到桌面")
 
     return uid, psw
-
-
-if __name__ == '__main__':
-    uid, psw = get_account()
+def main_main(uid,psw):
+    
+    # uid, psw = get_account()
     # print(uid, psw)
     zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
                   'service=https://zlapp.fudan.edu.cn/site/ncov/fudanDaily'
@@ -283,3 +282,10 @@ if __name__ == '__main__':
     # 再检查一遍
     daily_fudan.check()
     daily_fudan.close(1)
+
+if __name__ == '__main__':
+    uid = getenv("STD_ID").split()
+    psw = getenv("PASSWORD").split()
+    for i in range(len(uid)):
+        main_main(uid[i],psw[i])
+    
