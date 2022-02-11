@@ -287,7 +287,8 @@ def main_main(uid,psw):
 if __name__ == '__main__':
     uid = getenv("STD_ID").split()
     psw = getenv("PASSWORD").split()
-    main_main(uid[0],psw[0])
-    time.sleep(300)
     main_main(uid[1],psw[1])
+    time.sleep(300)
+    main_main(uid[0],psw[0])
+    
     
