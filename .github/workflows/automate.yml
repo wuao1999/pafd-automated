@@ -28,7 +28,5 @@ jobs:
     
       - name: run1
         run: STD_ID='${{ secrets.STD_ID1 }}' PASSWORD='${{ secrets.PASSWORD1 }}' python3 main.py
-      - name: run2
-        run: STD_ID='${{ secrets.STD_ID2 }}' PASSWORD='${{ secrets.PASSWORD2 }}' python3 main.py
       - name: run3
         run: STD_ID='${{ secrets.STD_ID3 }}' PASSWORD='${{ secrets.PASSWORD3 }}' python3 main.py
